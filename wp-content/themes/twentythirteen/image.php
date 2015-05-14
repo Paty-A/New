@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying image attachments
+ * The template for displaying image attachments.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen

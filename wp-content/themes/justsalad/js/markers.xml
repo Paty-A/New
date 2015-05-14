@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<markers>
+<marker>
+<id>1</id>
+<region>1</region>
+<name>Midtown East</name>
+<address>320 Park Ave</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10022</zip>
+<country>USA</country>
+<details>(enter on 51st)</details>
+<hours>M-F 11am-830pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6464309239</phonedirect>
+<fax>2123087847</fax>
+<email>cacosta@justsalad.com</email>
+<url>/locations/midtown-east/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.757758</lat>
+<lng>-73.974262</lng>
+</marker>
+
+<marker>
+<id>2</id>
+<region>1</region>
+<name>Fashion District</name>
+<address>134 W 37th Street</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10018</zip>
+<country>USA</country>
+<details>between 7th and Broadway</details>
+<hours>M-F 11am-4pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2122447315</phonedirect>
+<fax>2122441121</fax>
+<email>mattd@justsalad.com</email>
+<url>/locations/fashion-district/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.752344</lat>
+<lng>-73.988527</lng>
+</marker>
+
+<marker>
+<id>3</id>
+<region>1</region>
+<name>Financial District</name>
+<address>100 Maiden Lane </address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10038</zip>
+<country>USA</country>
+<details>Gold Street</details>
+<hours>Sun-Thur 11:30am-10pm</hours>
+<hours2>Fri-Sat: 11:30am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6463652120</phonedirect>
+<fax>6467564603</fax>
+<email>VLotongkhum@justsalad.com</email>
+<url>/locations/financial-district/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.706897</lat>
+<lng>-74.007211</lng>
+</marker>
+
+<marker>
+<id>4</id>
+<region>1</region>
+<name>30 Rock</name>
+<address>30 Rockefeller Plaza</address>
+<address2>Concourse Level #6</address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10112</zip>
+<country>USA</country>
+<details>Concourse Level between 49th and 50th Streets, between 5th and 6th Avenues</details>
+<hours>M-F: 10:30am-8:30pm</hours>
+<hours2>Sat-Sun: 11am-5pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2127575064</phonedirect>
+<fax>2122460717</fax>
+<email>pmarsh@justsalad.com</email>
+<url>/locations/30-rock/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.758928</lat>
+<lng>-73.980045</lng>
+</marker>
+
+<marker>
+<id>5</id>
+<region>1</region>
+<name>Murray Hill</name>
+<address>600 Third Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10016</zip>
+<country>USA</country>
+<details>between 39th and 40th</details>
+<hours>Sun-F 11am-10pm</hours>
+<hours2>Sat: 11am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2126823832</phonedirect>
+<fax>2126828359</fax>
+<email>aducasse@justsalad.com</email>
+<url>/locations/murray-hill/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.749256</lat>
+<lng>-73.97584</lng>
+</marker>
+
+<marker>
+<id>6</id>
+<region>1</region>
+<name>Chelsea</name>
+<address>706 6th Ave</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10010</zip>
+<country>USA</country>
+<details>23rd Street</details>
+<hours>M-F 10:30am-10pm</hours>
+<hours2>Sat-Sun: 11am-10pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6464026249</phonedirect>
+<fax>6464227988</fax>
+<email>rbutler@justsalad.com</email>
+<url>/locations/chelsea/</url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<lat>40.742586</lat>
+<lng>-73.993004</lng>
+</marker>
+
+
+
+</markers>

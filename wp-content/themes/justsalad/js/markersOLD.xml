@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<markers>
+<marker>
+<id>1</id>
+<name>Midtown East</name>
+<address>320 Park Ave</address>
+<details>(enter on 51st)</details>
+<hours>M-F 11am-830pm</hours>
+<hours2>Sat-Sun: Closed</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/midtown-east/</url>
+<lat>40.757758</lat>
+<lng>-73.974262</lng>
+</marker>
+
+<marker>
+<id>2</id>
+<name>Fashion District</name>
+<address>134 W 37th Street</address>
+<details>between 7th and</details>
+<hours>M-F 11am-4pm</hours>
+<hours2>Sat-Sun: Closed</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/fashion-district/</url>
+<lat>40.752344</lat>
+<lng>-73.988527</lng>
+</marker>
+
+<marker>
+<id>3</id>
+<name>Financial District</name>
+<address>100 Maiden Lane </address>
+<details>between Pearl and Gold</details>
+<hours>Sun-Thur 11:30am-10pm</hours>
+<hours2>Fri-Sat: Closed</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/financial-district/</url>
+<lat>40.706897</lat>
+<lng>-74.007211</lng>
+</marker>
+
+<marker>
+<id>4</id>
+<name>30 Rock</name>
+<address>30 Rockefeller Plaza</address>
+<details>Concourse Level</details>
+<hours>M-F: 10:30am-8:30pm 11:30am-10pm</hours>
+<hours2>Sat-Sun: 11am-5pm</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/30-rock/</url>
+<lat>40.758928</lat>
+<lng>-73.980045</lng>
+</marker>
+
+<marker>
+<id>5</id>
+<name>Murray Hill</name>
+<address>600 Third Avenue</address>
+<details>between 39th and 40th</details>
+<hours>Sun-Thur 11am-10pm</hours>
+<hours2>Fri-Sat: 11am-9pm</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/murray-hill/</url>
+<lat>40.749256</lat>
+<lng>-73.97584</lng>
+</marker>
+
+<marker>
+<id>6</id>
+<name>Chelsea</name>
+<address>706 6th Ave</address>
+<details>between 22nd and 23rd</details>
+<hours>M-F 10:30am-10pm</hours>
+<hours2>Sat-Sun: 11am-10pm</hours2>
+<phone>212-244-1111</phone>
+<url>/locations/chelsea/</url>
+<lat>40.742586</lat>
+<lng>-73.993004</lng>
+</marker>
+
+
+
+</markers>

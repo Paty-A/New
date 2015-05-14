@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Restricted"
+AuthUserFile "/home/salad/.htpasswds/public_html/po/passwd"
+require valid-user
+

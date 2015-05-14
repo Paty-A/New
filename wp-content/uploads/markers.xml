@@ -1,0 +1,668 @@
+<?xml version="1.0"?><markers>
+<marker>
+<id>1</id>
+<region>1</region>
+<name>Park Avenue </name>
+<address>320 Park Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10022</zip>
+<country>USA</country>
+<details>(51st Street)</details>
+<hours>Mon-Fri: 11am-8:30pm</hours>
+<hours2>Sat-Sun: Closed</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6464309239</phonedirect>
+<fax>2123087847</fax>
+<email>cacosta@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/midtown-east/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>45th St. to 55th St. (South to North)&lt;br /&gt;East River to 5th Ave. (East to West)</range>
+<lat>40.757758</lat>
+<lng>-73.974262</lng>
+</marker>
+
+
+<marker>
+<id>1</id>
+<region>4</region>
+<name>Wayne</name>
+<address>28 Willowbrook Blvd</address>
+<address2></address2>
+<city>Wayne</city>
+<state>NJ</state>
+<zip>07470</zip>
+<country>USA</country>
+<details></details>
+<hours>Mon-Sun 11:00am - 9:00pm </hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>(212) 244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/wayne-nj-2/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com</order>
+<range>Three Mile Radius </range>
+<lat>40.8894528</lat>
+<lng>-74.2495988</lng>
+</marker>
+
+
+<marker>
+<id>2</id>
+<region>1</region>
+<name>Fashion District</name>
+<address>134 W 37th Street.</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10018</zip>
+<country>USA</country>
+<details>(7th &amp; Broadway)</details>
+<hours>Mon-Thurs: 11am-8pm </hours>
+<hours2>Fri: 11am-4pm / Sat-Sun: Closed</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2122447315</phonedirect>
+<fax>2122441121</fax>
+<email>mattd@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/fashion-district/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>29th St. to 40th St. (South to North)&lt;br /&gt;Fifth Ave. to 10th Ave. (East to West)</range>
+<lat>40.752344</lat>
+<lng>-73.988527</lng>
+</marker>
+
+
+<marker>
+<id>3</id>
+<region>1</region>
+<name>Financial District </name>
+<address>100 Maiden Lane</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10038</zip>
+<country>USA</country>
+<details>(Gold Street)</details>
+<hours>Sun-Thur: 11am-10pm</hours>
+<hours2>Fri-Sat: 11am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6463652120</phonedirect>
+<fax>6467564603</fax>
+<email>VLotongkhum@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/financial-district/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>South of Canal Street, including:&lt;br /&gt;Financial District, Battery Park, and Tribeca.&lt;br /&gt;Please call us to check your address.</range>
+<lat>40.706897</lat>
+<lng>-74.007211</lng>
+</marker>
+
+
+<marker>
+<id>4</id>
+<region>1</region>
+<name>30 Rock</name>
+<address>30 Rockefeller Plaza</address>
+<address2>Concourse Level #6</address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10112</zip>
+<country>USA</country>
+<details>Concourse Level (49th &amp; 50th Street), between (5th &amp; 6th Avenue)</details>
+<hours>Mon-Fri: 10:30am-9pm</hours>
+<hours2>Sat: 11am-5pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2127575064</phonedirect>
+<fax>2122460717</fax>
+<email>pmarsh@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/30-rock/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>40th St. to 62nd St. (South to North)&lt;br /&gt;5th Ave. to Broadway (East to West)</range>
+<lat>40.758928</lat>
+<lng>-73.980045</lng>
+</marker>
+
+
+<marker>
+<id>5</id>
+<region>1</region>
+<name>Murray Hill</name>
+<address>600 Third Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10016</zip>
+<country>USA</country>
+<details>(39th &amp; 40th)</details>
+<hours>Sun-Fri: 11am-10pm</hours>
+<hours2>Sat: 11am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>2126823832</phonedirect>
+<fax>2126828359</fax>
+<email>aducasse@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/murray-hill/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>26th St. to 45th St. (South to North)&lt;br /&gt;FDR to Fifth Ave. (East to West)</range>
+<lat>40.749256</lat>
+<lng>-73.97584</lng>
+</marker>
+
+
+<marker>
+<id>6</id>
+<region>1</region>
+<name>Chelsea</name>
+<address>706 6th Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10010</zip>
+<country>USA</country>
+<details>(22nd &amp; 23rd)</details>
+<hours>Mon-Fri: 10:30am-10pm</hours>
+<hours2>Sat-Sun: 11am-10pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>6464026249</phonedirect>
+<fax>6464227988</fax>
+<email>rbutler@justsalad.com</email>
+<contactemail></contactemail>
+<url>/locations/chelsea/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>13th St. to 28th St. (South to North)&lt;br /&gt;Third Ave. to the Hudson River (East to West)</range>
+<lat>40.742586</lat>
+<lng>-73.993004</lng>
+</marker>
+
+
+<marker>
+<id>7</id>
+<region>1</region>
+<name>World Wide Plaza</name>
+<address>321 W 49th Street.</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10019</zip>
+<country></country>
+<details>(8th &amp; 9th) </details>
+<hours>Mon-Sun: 11am-8:30pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/world-wide-plaza/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>40th St. to 62nd St. (South to North)&lt;br /&gt;Broadway to 11th Ave. (East to West)</range>
+<lat>40.762001</lat>
+<lng>-73.9873623</lng>
+</marker>
+
+
+<marker>
+<id>8</id>
+<region>1</region>
+<name>Lexington</name>
+<address>663 Lexington Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10022</zip>
+<country>USA</country>
+<details>(55th &amp; 56th)</details>
+<hours>Mon-Sun: 11am-9pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/lexington/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>55th St. to 66th St. (South to North)&lt;br /&gt;East River to 5th Ave. (East to West)</range>
+<lat>40.759771</lat>
+<lng>-73.969667</lng>
+</marker>
+
+
+<marker>
+<id>9</id>
+<region>1</region>
+<name>Park Slope</name>
+<address>252 7th Avenue</address>
+<address2></address2>
+<city>Brooklyn</city>
+<state>NY</state>
+<zip>11215</zip>
+<country></country>
+<details>(4th &amp; 5th)</details>
+<hours>Mon-Sun: 11am-10pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect>212-244-1111</phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/park-slope/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>16th St. to Union St. (South to North)&lt;br /&gt;Prospect Park West to 3rd Ave. (East to West)</range>
+<lat>40.6695314</lat>
+<lng>-73.9796164</lng>
+</marker>
+
+
+<marker>
+<id>10</id>
+<region>1</region>
+<name>8th Street</name>
+<address>53 E 8th Street.</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10003</zip>
+<country></country>
+<details>(Broadway &amp; University)</details>
+<hours>Mon-Fri: 10:30am-9:30pm</hours>
+<hours2>Sat-Sun: 11am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/8th-street/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>Prince St. to 17th St. (South to North)&lt;br /&gt;2nd Ave to 6th Ave. (East to West)</range>
+<lat>40.7312742</lat>
+<lng>-73.9936079</lng>
+</marker>
+
+
+<marker>
+<id>11</id>
+<region>1</region>
+<name>Upper East Side</name>
+<address>1471 3rd Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10028</zip>
+<country>USA</country>
+<details>(83rd Street)</details>
+<hours>Mon-Sun: 10:30am-10pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/upper-east-side/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>76th St. to 93rd St. (South to North)&lt;br /&gt;1st Ave. to Park Ave. (East to West)&lt;br/&gt;&lt;strong&gt;Now delivering east to the FDR from 79th to 90th too!&lt;/strong&gt;</range>
+<lat>40.77694</lat>
+<lng>-73.955219</lng>
+</marker>
+
+
+<marker>
+<id>12</id>
+<region>1</region>
+<name>1st Ave &amp; 70th</name>
+<address>1306 First Avenue</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10021</zip>
+<country>USA</country>
+<details>(70th &amp; 71st)</details>
+<hours>Mon-Sun: 10:30am-9:30pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/1st-ave-70th/ </url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>66th St. to 78th St. (South to North)&lt;br /&gt;FDR Drive. to 2nd Ave. (East to West)</range>
+<lat>40.766669</lat>
+<lng>-73.956524</lng>
+</marker>
+
+
+<marker>
+<id>13</id>
+<region>1</region>
+<name>Hudson Square </name>
+<address>325 Hudson Street.</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10013</zip>
+<country></country>
+<details>(Vandam Street)</details>
+<hours>Mon-Fri: 11:00am - 8:30pm </hours>
+<hours2>Sat-Sun: CLOSED</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/hudson-square/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>N Moore St. to Houston St. (South to North)&lt;br /&gt;Avenue of Americas. to West St. (East to West)&lt;br /&gt; Houston St. to 10th St. (South to North)&lt;br /&gt;7th Ave. to West St. (East to West)</range>
+<lat>40.726716</lat>
+<lng>-74.007590</lng>
+</marker>
+
+
+<marker>
+<id>14</id>
+<region>1</region>
+<name>Downtown Brooklyn</name>
+<address>210 State Street</address>
+<address2></address2>
+<city>Brooklyn</city>
+<state>NY</state>
+<zip>11201</zip>
+<country></country>
+<details>(Court Street)</details>
+<hours>Mon-Fri 10:30am-10:00pm</hours>
+<hours2>Sat-Sun 11am-9pm</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/downtown-brooklyn/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu></mobilemenu>
+<order>http://www.orderjustsalad.com</order>
+<range></range>
+<lat>40.6902512</lat>
+<lng>-73.9918847</lng>
+</marker>
+
+
+<marker>
+<id>15</id>
+<region>1</region>
+<name>Macy's Herald Square</name>
+<address>151 West 34th Street</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10001</zip>
+<country></country>
+<details></details>
+<hours>Mon-Sun: 11am-9pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>(212) 244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/macys-herald-square/</url>
+<menu>http://www.justsalad.com/menu</menu>
+<mobilemenu>http://www.justsalad.com/menu-2/</mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range></range>
+<lat>40.7507927</lat>
+<lng>-73.9895358</lng>
+</marker>
+
+
+<marker>
+<id>16</id>
+<region>1</region>
+<name>90 Broad Street</name>
+<address>90 Broad Street</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10004</zip>
+<country></country>
+<details></details>
+<hours>Mon - Fri: 10:30AM-8:30PM </hours>
+<hours2>Sat - Sun: CLOSED</hours2>
+<hours3></hours3>
+<phone>212-244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/90-broad-street/</url>
+<menu>http://www.justsalad.com/menu/</menu>
+<mobilemenu>http://www.justsalad.com/menu-2/</mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>Batty Park Underpass. to Vesey St. (South to North)&lt;br /&gt;South St. to Esplanade. (East to West)</range>
+<lat>40.7037429</lat>
+<lng>-74.0118845</lng>
+</marker>
+
+
+<marker>
+<id>17</id>
+<region>1</region>
+<name> Upper West Side</name>
+<address>2056 Broadway</address>
+<address2>(Between 70th and 71st)</address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10023</zip>
+<country></country>
+<details></details>
+<hours>Mon - Sun: 11AM - 10PM</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>(212) 244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url></url>
+<menu>http://www.justsalad.com/menu/</menu>
+<mobilemenu>http://www.justsalad.com/menu-2/</mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>62nd St. to 76th St. (South to North)&lt;br /&gt;Riverside Drive. to Central Park West. (East to West)</range>
+<lat>40.7774896</lat>
+<lng>-73.9817174</lng>
+</marker>
+
+
+<marker>
+<id>18</id>
+<region>1</region>
+<name>NOW OPEN! 140 8th Avenue</name>
+<address>140 8th Ave </address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10011</zip>
+<country></country>
+<details>(17th Street)</details>
+<hours>Mon - Fri: 10:30am - 10:00pm  </hours>
+<hours2>Sat - Sun: 10:30am - 9:00pm</hours2>
+<hours3></hours3>
+<phone>(212) 244-1111</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url></url>
+<menu>http://www.justsalad.com/menu/</menu>
+<mobilemenu></mobilemenu>
+<order>https://www.orderjustsalad.com/</order>
+<range>13th St. to 22nd St. (South to North)&lt;br /&gt;7th Ave. to 11th Ave. (East to West)</range>
+<lat>40.741437</lat>
+<lng>-74.001012</lng>
+</marker>
+
+
+<marker>
+<id>19</id>
+<region>1</region>
+<name>NOW OPEN! 315 Park Ave South</name>
+<address>315 Park Avenue South</address>
+<address2></address2>
+<city>New York</city>
+<state>NY</state>
+<zip>10010</zip>
+<country></country>
+<details>Between 23rd and 24th St</details>
+<hours>MON-SUN 10:30am - 9:30pm </hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone></phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url></url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<range></range>
+<lat>40.740557</lat>
+<lng>-73.9858427</lng>
+</marker>
+
+
+<marker>
+<id>102</id>
+<region>2</region>
+<name>MTR Hong Kong Station (Now Open!)</name>
+<address>Concession HOK 65</address>
+<address2>(Escalator access from IFC)</address2>
+<city>Hong Kong</city>
+<state></state>
+<zip></zip>
+<country>HK</country>
+<details></details>
+<hours>Mon-Sat: 11 AM - 9:30 PM</hours>
+<hours2>Sun: Closed</hours2>
+<hours3></hours3>
+<phone></phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email>kenny@justsalad.com.hk</email>
+<contactemail></contactemail>
+<url></url>
+<menu></menu>
+<mobilemenu></mobilemenu>
+<order>http://www.justsaladexpress.com</order>
+<range></range>
+<lat>22.287826</lat>
+<lng>114.158421</lng>
+</marker>
+
+
+<marker>
+<id>201</id>
+<region>5</region>
+<name>Jumeirah Lake Towers (JLT)</name>
+<address>Indigo Tower</address>
+<address2>Cluster D</address2>
+<city>Dubai</city>
+<state></state>
+<zip></zip>
+<country>United Arab Emirates</country>
+<details></details>
+<hours>Mon - Sun: 11am - 11:00pm</hours>
+<hours2></hours2>
+<hours3></hours3>
+<phone>04 3652222</phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url>/locations/jumeirah-lake-towers-jlt/</url>
+<menu>http://dubai.justsalad.com/menu/</menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<range></range>
+<lat>25.0726469</lat>
+<lng>55.1427976</lng>
+</marker>
+
+
+<marker>
+<id>301</id>
+<region>6</region>
+<name>Jackson Square</name>
+<address>20 East Jackson Blvd</address>
+<address2></address2>
+<city>Chicago</city>
+<state>IL</state>
+<zip>60604</zip>
+<country></country>
+<details>S State St &amp; S Wabash Ave</details>
+<hours>Mon - Fri: 10:30am - 9pm </hours>
+<hours2>Sat - Sun: 11am - 8pm</hours2>
+<hours3></hours3>
+<phone></phone>
+<phonedirect></phonedirect>
+<fax></fax>
+<email></email>
+<contactemail></contactemail>
+<url></url>
+<menu>http://justsalad.com/chicagomenu/</menu>
+<mobilemenu></mobilemenu>
+<order></order>
+<range></range>
+<lat>41.8784276</lat>
+<lng>-87.6268176</lng>
+</marker>
+
+</markers>

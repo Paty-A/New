@@ -1,0 +1,581 @@
+ #pageslide {
+    /* These styles MUST be included. Do not change. */
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 97%;
+    z-index: 999999;
+    
+    /* Specify the width of your pageslide here */
+    width: 94%; /*260px;*/ /* 95% fills screen exactly to cover rest of section */
+    padding: 5px 10px 30px 30px;
+    
+    /* These styles are optional, and describe how the pageslide will look */
+    background-color: #424242; /*#87D300;*/
+    color: #222;
+    /*-webkit-box-shadow: inset 0 0 5px 5px #222;/*#79BD00;*/
+    /*-moz-shadow: inset 0 0 5px 5px #222;/*#79BD00;*/
+    /*box-shadow: inset 0 0 5px 5px #222;/*#79BD00;*/
+}
+ 
+
+  .ribbon-wrapper-green {
+  width: 120px;
+  height: 88px;
+  overflow: visible;
+  position: fixed;
+  top: -16px;
+  right: -10px;
+  z-index: 999998;
+}
+
+.ribbon-green { /*now gray*/
+  left: -8px;
+	transition: left 400ms linear;
+	-webkit-transition: left 400ms linear;
+	-moz-transition: left 400ms linear;
+	-o-transition: left 400ms linear;
+  font: bold 14px Sans-Serif;
+  color: #333;
+  text-align: center;
+  /*text-shadow: rgba(47,137,39,0.5) 0px 1px 0px;*/
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 2px 8px;
+  top: 32px;
+  width: 155px;
+  background-color: #2F8927; /*#E5E4E2;*/ /*#424242;*/
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(#a3a3a3), to(#424242)); 
+  background-image: -webkit-linear-gradient(top, #a3a3a3, #424242); 
+  background-image:    -moz-linear-gradient(top, #a3a3a3, #424242); 
+  background-image:     -ms-linear-gradient(top, #a3a3a3, #424242); 
+  background-image:      -o-linear-gradient(top, #a3a3a3, #424242);*/ 
+  color: #FFF; /*black;*/ /*#87D300;*/
+  /*-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);*/
+}
+
+.ribbon-green:not([class*="unfurl"]) {
+	left: 100px;
+	transition: left 300ms linear;
+	-webkit-transition: left 300ms linear;
+	-moz-transition: left 300ms linear;
+	-o-transition: left 300ms linear;
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+} 
+ 
+ /* RESET 
+------------------------ */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+
+/* Prevents iOS text size adjust after orientation change, without disabling (Thanks to @necolas) */ 
+  html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+
+ html, body {
+ height: 100%;
+ }
+  
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  
+  body {
+  	line-height: 1;
+  }
+  
+  a {
+  	text-decoration: none;
+  	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Removes the dark touch outlines on links */
+  }
+  
+  ol, ul {
+  	list-style: none;
+  }
+  
+  blockquote, q {
+  	quotes: none;
+  }
+  
+  blockquote:before, blockquote:after,
+  
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+  
+  .clear {
+	clear: both;
+  }
+
+  /* General
+  ------------------------ */
+  body {
+	font-family: 'Arial Black', Gadget, sans-serif;
+  }
+
+
+  hr {
+	margin-bottom: -5px;
+	height: 3px;
+	background-color: #E5E4E2;
+	border: none;		
+  } 
+
+  .small {
+	line-height: 17px;
+  }
+ 
+  section {
+	background-color : transparent;
+	padding: 0 0 0 0;
+	/* Changed for .green */
+	width: 100%;
+	margin: 10px 0 3px;
+  }
+  
+  section h2 {
+	font-size: 1.6em;
+	font-weight: 900;
+	color: #87D300;
+	/* Changed for .green */
+	padding: 20px 0 15px 5%;
+	/* Added for .green */
+	margin: -10px 0 0;
+  }
+  
+  section.green h2 {
+  	background-color: #a0ce67;
+  }
+  
+  section.green h2, section.green h2 font {
+  	color: #FFF;
+  }
+  
+  section img.arrow {
+	margin: 10px 20px 0 0;
+	width: 12px;
+	display: block;
+	float: right;
+  }
+
+  section img.Vegetarian {
+	padding-left: 5px;
+	height: 12px; 
+	width:  60px; 
+	display: inline;
+  }
+
+  section .slider {
+	padding: 0;
+	background-color : transparent;
+	display: none;
+	/* Added for .green */
+	margin: 0 auto;
+	width: 90%;
+  }
+
+  section .slider .menu-item {
+	padding: 5px 20px;
+  }
+
+  section .slider h3, 
+  section .slider h3 a {
+	color: #FF7300;
+	font-size: 16px; /* for browsers that don't support rem */
+	font-size: 1rem; /* medium */
+	font-weight: bold;
+	margin: 0px 0px 1px;
+  }
+
+  section .slider p,
+   section .slider li {
+	color: #222;
+	/*font-size: 80%; /* 0.8 x h3.font-size */
+	font-size: 13px;
+	font-size: .8rem;
+	font-weight: 200;
+	line-height: 1.2em; /* 1.2 x this.font-size */
+	margin-bottom: 10px;
+  }
+  
+  section .slider li a.item-nutrition-link {
+    color: #222;
+    /*font-size: .9rem;*/
+  	font-weight: 200;
+  	line-height: 1.3em;
+  }
+  
+  section .slider p.note {
+	color: #666666;
+	margin-top: -8px;
+	font-style: italic;
+	/*font-size: .7em; /* 0.7 x h3.font-size */
+	font-size: 11px;
+	font-size: .7rem
+	/* line-height carries over from p */
+  }
+  
+  section .slider ul {
+	margin-top: -5px;
+	margin-bottom: -13px;
+  }
+  
+  section .slider li {
+	line-height: 1em;
+	margin-bottom: 5px;
+  }
+
+  section .slider li p {
+      display: inline;
+      color: #666666;
+      font-style: italic;
+      font-size: .7em;
+  }
+  
+  /* Right-aligned subcontent in lists (chevrons, buttons, counts and toggles)
+-------------------------------------------------- */
+.list .chevron {
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+}
+
+/* Chevrons
+-------------------------------------------------- */
+
+.chevron {
+  display: block;
+  height: 20px;
+}
+
+/* Base styles for both 1/2's of the chevron */
+.chevron:before,
+.chevron:after {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #999;
+  content: '';
+}
+
+/* Position and rotate respective 1/2's of the chevron */
+.chevron:before {
+  top: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.chevron:after {
+  top: 7px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+ /* Base Styles for Nutrition Pane
+ ------------------------------------------------- */
+ .item-nutrition-pane {
+ 	font-family: 'Arial Black', Gadget, sans-serif;
+ 	font-size: small;
+ 	line-height: 1.2;
+ 	height: 100%;
+ 	overflow-y: auto;
+ }
+ 
+ /* Allergen formating */
+p.vegan {
+  background-color: #00AEDD;
+  font-weight: bold;
+  color: #FFF;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+p.milk {
+  background-color: #CCCC99;
+  font-weight: bold;
+  color: #FFF;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+p.gluten {
+  background-color: #CCC;
+  font-weight: bold;
+  color: #FFF;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* Title bar
+-------------------------------------------------- */
+/* Bar docked to top of viewport for showing page title and actions */
+.bar-title {
+  position: fixed;
+  top: 3px;
+  height: 45px;
+  width: 94%;
+  display: -webkit-box;
+  display: box;
+  background-color: #424242;
+  background-image: -webkit-linear-gradient(top, #424242 0, #424242 100%);
+  background-image: linear-gradient(to bottom, #424242 0, #424242 100%);
+  /*border-bottom: 2px solid #000;*/
+  -webkit-box-orient: horizontal;
+          box-orient: horizontal;
+}
+
+/* Centered text in the .bar-title */
+.bar-title .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 44px;
+  color: #FFF;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bar-title > a:not([class*="button"]) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Retain specified title color */
+.bar-title .title a {
+  color: inherit;
+}
+
+/* Buttons in title bars
+-------------------------------------------------- */
+/* Generic style for all buttons in .bar-title */
+.bar-title [class*="button"] {
+  position: absolute;
+  top: 0;
+  z-index: 10; /* Places buttons over full width title */
+  font-size: 12px;
+  line-height: 23px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  background-color: transparent;/*#393939;*/
+  /*background-image: -webkit-linear-gradient(top, #ff5e00 0, #FF7300 100%);
+  background-image: linear-gradient(to bottom, #ff5e00 0, #FF7300 100%);*/
+  border: 1px solid #FFF;/*#e66800;*/
+  box-shadow: 0 1px rgba(255, 255, 255, .25);
+  -webkit-box-flex: 0;
+          box-flex: 0;
+}
+
+
+/* Override standard button active states */
+/*.bar-title .button:active {
+  color: #fff;
+  background-color: #ff5e00;
+}*/
+
+/* General button styles
+-------------------------------------------------- */
+
+[class*="button"] {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 5px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  vertical-align: top;
+  cursor: pointer;
+  /*background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #f8f8f8 0, #d4d4d4 100%);
+  background-image: linear-gradient(to bottom, #f8f8f8 0, #d4d4d4 100%);*/
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .05);
+}
+
+/* Active */
+[class*="button"]:active {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  color: #333;
+  background-color: #ccc;
+  background-image: none;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+}
+
+
+/* Table Properties
+-------------------------------------------------- */
+.performance-facts {
+  background-color: #FFF;
+  border: 2px solid #000;
+  margin: 55px 0 0 0;
+  float: left;
+  width: 94%;
+  padding: 0.5rem;
+  /*box-shadow: /*inset 0 6px 10px rgba(0, 0, 0, 0.15),*/ 
+  			  /*inset 0 -6px 10px rgba(0, 0, 0, 0.15)/*, 
+  			  inset 4px 0 0 rgba(255, 255, 255, 1), 
+  			  inset -4px 0 0 rgba(255, 255, 255, 1);  
+  /* Sizes table container as %age of viewport height and makes it scrollable */
+  /*height: auto;
+  max-height: 78%;
+  /*height: 74vh; /* vh doesn't seem to work for Note II internet */
+  /*overflow: auto;*/
+}
+.performance-facts table {
+  border-collapse: collapse;
+}
+.performance-facts__title {
+  color: #87D300;
+  font-weight: bold;
+  font-size: 19px;
+  margin: 0 0 0.25rem 0;
+}
+.performance-facts__table,
+.performance-facts__table--small,
+.performance-facts__table--grid {
+  width: 100%;
+}
+.performance-facts__table thead tr th,
+.performance-facts__table--small thead tr th,
+.performance-facts__table--grid thead tr th,
+.performance-facts__table thead tr td,
+.performance-facts__table--small thead tr td,
+.performance-facts__table--grid thead tr td {
+  border: 0;
+}
+.performance-facts__table th,
+.performance-facts__table--small th,
+.performance-facts__table--grid th,
+.performance-facts__table td,
+.performance-facts__table--small td,
+.performance-facts__table--grid td {
+  font-weight: normal;
+  text-align: left;
+  padding: 0.25rem 0;
+  white-space: nowrap;
+}
+.performance-facts__table th,
+.performance-facts__table--small th,
+.performance-facts__table--grid th,
+.performance-facts__table td,
+.performance-facts__table--small td {
+  border-top: 1px solid #000;
+}
+.performance-facts__table td:last-child,
+.performance-facts__table--small td:last-child,
+.performance-facts__table--grid td:last-child {
+  text-align: right;
+}
+.performance-facts__table .blank-cell,
+.performance-facts__table--small .blank-cell,
+.performance-facts__table--grid .blank-cell {
+  width: 1rem;
+  border-top: 0;
+}
+.performance-facts__table .thick-row th,
+.performance-facts__table--small .thick-row th,
+.performance-facts__table--grid .thick-row th,
+.performance-facts__table .thick-row td,
+.performance-facts__table--small .thick-row td,
+.performance-facts__table--grid .thick-row td {
+  border-top-width: 5px;
+  border-top-color: #87D300;
+}
+.small-info {
+  font-size: 0.7rem;
+}
+.performance-facts__table--small {
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+}
+.performance-facts__table--small thead tr {
+  border-bottom: 1px solid #000;
+}
+.performance-facts__table--small td:last-child {
+  text-align: left;
+}
+.performance-facts__table--small th,
+.performance-facts__table--small td {
+  border: 0;
+  padding: 0;
+}
+.performance-facts__table--grid {
+  margin: 0 0 0.5rem 0;
+}
+.performance-facts__table--grid td:last-child {
+  text-align: left;
+}
+.performance-facts__table--grid td:last-child::before {
+  font-weight: bold;
+  margin: 0 0.25rem 0 0;
+}
+.text-center {
+  text-align: center;
+}
+.thick-end {
+  border-bottom: 5px solid #87D300;
+}
+/*.thin-end*/ .performance-facts__table--grid tr {
+  border-bottom: 1px solid #000;
+}
+
+
+        #modal { display: none; }
+        #modal a { background: #CCC; color: #fff; font-weight: bold; padding: 5px 10px; border: none; }
+        #modal a:hover { background: #fff; } 

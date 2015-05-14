@@ -9,7 +9,7 @@
 define('WP_LOAD_IMPORTERS', true);
 
 /** Load WordPress Bootstrap */
-require_once( dirname( __FILE__ ) . '/admin.php' );
+require_once ('admin.php');
 
 if ( !current_user_can('import') )
 	wp_die(__('You do not have sufficient permissions to import content in this site.'));
@@ -25,8 +25,8 @@ get_current_screen()->add_help_tab( array(
 
 get_current_screen()->set_help_sidebar(
 	'<p><strong>' . __('For more information:') . '</strong></p>' .
-	'<p>' . __('<a href="https://codex.wordpress.org/Tools_Import_Screen" target="_blank">Documentation on Import</a>') . '</p>' .
-	'<p>' . __('<a href="https://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
+	'<p>' . __('<a href="http://codex.wordpress.org/Tools_Import_Screen" target="_blank">Documentation on Import</a>') . '</p>' .
+	'<p>' . __('<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
 );
 
 if ( current_user_can( 'install_plugins' ) )
@@ -47,11 +47,12 @@ if ( ! empty( $_GET['invalid'] ) && isset( $popular_importers[ $_GET['invalid'] 
 add_thickbox();
 wp_enqueue_script( 'plugin-install' );
 
-require_once( ABSPATH . 'wp-admin/admin-header.php' );
+require_once ('admin-header.php');
 $parent_file = 'tools.php';
 ?>
 
 <div class="wrap">
+<?php screen_icon(); ?>
 <h2><?php echo esc_html( $title ); ?></h2>
 <?php if ( ! empty( $_GET['invalid'] ) ) : ?>
 	<div class="error"><p><strong><?php _e('ERROR:')?></strong> <?php printf( __('The <strong>%s</strong> importer is invalid or is not installed.'), esc_html( $_GET['invalid'] ) ); ?></p></div>
@@ -74,11 +75,12 @@ foreach ( $popular_importers as $pop_importer => $pop_data ) {
 if ( empty( $importers ) ) {
 	echo '<p>' . __('No importers are available.') . '</p>'; // TODO: make more helpful
 } else {
-	uasort( $importers, '_usort_by_first_member' );
+	uasort($importers, create_function('$a, $b', 'return strnatcasecmp($a[0], $b[0]);'));
 ?>
-<table class="widefat importers striped">
+<table class="widefat importers" cellspacing="0">
 
 <?php
+	$alt = '';
 	foreach ($importers as $importer_id => $data) {
 		$action = '';
 		if ( isset( $data['install'] ) ) {
@@ -107,8 +109,9 @@ if ( empty( $importers ) ) {
 			$action = "<a href='" . esc_url( "admin.php?import=$importer_id" ) . "' title='" . esc_attr( wptexturize( strip_tags( $data[1] ) ) ) ."'>{$data[0]}</a>";
 		}
 
+		$alt = $alt ? '' : ' class="alternate"';
 		echo "
-			<tr>
+			<tr$alt>
 				<td class='import-system row-title'>$action</td>
 				<td class='desc'>{$data[1]}</td>
 			</tr>";
@@ -127,4 +130,4 @@ if ( current_user_can('install_plugins') )
 
 <?php
 
-include( ABSPATH . 'wp-admin/admin-footer.php' );
+include ('admin-footer.php');

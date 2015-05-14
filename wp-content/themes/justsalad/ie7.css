@@ -1,0 +1,14 @@
+/*---:[ IE 7 styles for the JustSalad Theme ]:---*/
+/*---:[ -------------------------------------- ]:---*/
+
+.location-infoC h3 a.loclink { position: absolute; top: 0; font-size: 17px; }
+
+.location-infoC { padding-top: 30px; }
+
+#map {margin-top: 30px !IMPORTANT;}
+
+#wrapper { margin: 0 auto; }
+
+.location-infoC .locationInfo { min-height: 200px;} 
+
+#content, #sidebar-right, #content-wide { padding-top: 30px; }

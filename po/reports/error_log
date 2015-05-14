@@ -1,0 +1,58 @@
+[21-Sep-2007 20:49:29] PHP Warning:  mysql_query(): Access denied for user 'salad'@'localhost' (using password: NO) in /home/salad/public_html/po/reports/graph.php on line 22
+[21-Sep-2007 20:49:29] PHP Warning:  mysql_query(): A link to the server could not be established in /home/salad/public_html/po/reports/graph.php on line 22
+[21-Sep-2007 20:49:29] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/salad/public_html/po/reports/graph.php on line 23
+[21-Sep-2007 20:49:29] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 29
+[21-Sep-2007 20:49:29] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/salad/public_html/po/reports/graph.php:22) in /home/salad/public_html/po/reports/graph.php on line 61
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 50
+[21-Sep-2007 20:49:58] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/salad/public_html/po/reports/graph.php:50) in /home/salad/public_html/po/reports/graph.php on line 63
+[21-Sep-2007 22:24:44] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/salad/public_html/po/reports/graph.php on line 25
+[21-Sep-2007 22:24:44] PHP Warning:  Division by zero in /home/salad/public_html/po/reports/graph.php on line 32
+[21-Sep-2007 22:24:44] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/salad/public_html/po/reports/graph.php:25) in /home/salad/public_html/po/reports/graph.php on line 64

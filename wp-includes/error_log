@@ -1,0 +1,11 @@
+[10-Mar-2013 17:17:57 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[11-Mar-2013 16:16:56 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[12-Mar-2013 02:47:17 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[24-Apr-2013 19:23:57 UTC] PHP Fatal error:  Call to undefined function add_filter() in /home/salad/public_html/wp-includes/default-filters.php on line 17
+[16-Jul-2013 16:48:23 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[16-Jul-2013 17:40:51 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[16-Jul-2013 19:30:20 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/registration-functions.php on line 7
+[16-Oct-2013 05:06:47 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/rss-functions.php on line 8
+[06-Jun-2014 18:12:52 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/salad/public_html/wp-includes/admin-bar.php on line 40
+[19-Dec-2014 12:15:19 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/salad/public_html/wp-includes/admin-bar.php on line 40
+[26-Mar-2015 05:35:34 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/salad/public_html/wp-includes/rss-functions.php on line 8

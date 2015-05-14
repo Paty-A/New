@@ -1,0 +1,111 @@
+[28-Feb-2012 18:32:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 861
+[28-Feb-2012 18:32:14] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 862
+[28-Feb-2012 18:32:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 861
+[28-Feb-2012 18:32:38] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 862
+[28-Feb-2012 18:34:32] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 861
+[28-Feb-2012 18:34:32] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/jstest/public_html/wp-content/themes/justsalad/functions.php:661) in /home/jstest/public_html/wp-includes/functions.php on line 862
+[07-Mar-2012 18:32:39 UTC] PHP Parse error:  syntax error, unexpected T_ARRAY, expecting ')' in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 725
+[07-Mar-2012 18:32:42 UTC] PHP Parse error:  syntax error, unexpected T_ARRAY, expecting ')' in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 725
+[07-Mar-2012 18:32:43 UTC] PHP Parse error:  syntax error, unexpected T_ARRAY, expecting ')' in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 725
+[08-Mar-2012 13:51:51 UTC] PHP Warning:  fopen() expects at least 2 parameters, 1 given in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 912
+[08-Mar-2012 13:57:25 UTC] PHP Warning:  fopen(/home/jstest/public_html/wp-content/themes/justsalad/testFile.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 902
+[08-Mar-2012 13:58:01 UTC] PHP Warning:  fopen(/home/jstest/public_html/wp-content/themes/justsalad/testFile.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 902
+[08-Mar-2012 14:06:26 UTC] PHP Warning:  fopen(/home/jstest/public_html/wp-content/themes/justsalad/testFile.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: Permission denied in /home/jstest/public_html/wp-content/themes/justsalad/functions.php on line 902
+[07-Sep-2012 13:28:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/salad/public_html/wp-content/plugins/quick-pagepost-redirect-plugin/page_post_redirect_plugin.php on line 163
+[07-Sep-2012 13:38:25 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/salad/public_html/wp-content/plugins/quick-pagepost-redirect-plugin/page_post_redirect_plugin.php on line 163
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_users' already exists for query CREATE TABLE wp_users (
+  ID bigint(20) unsigned NOT NULL auto_increment,
+  user_login varchar(60) NOT NULL default '',
+  user_pass varchar(64) NOT NULL default '',
+  user_nicename varchar(50) NOT NULL default '',
+  user_email varchar(100) NOT NULL default '',
+  user_url varchar(100) NOT NULL default '',
+  user_registered datetime NOT NULL default '0000-00-00 00:00:00',
+  user_activation_key varchar(60) NOT NULL default '',
+  user_status int(11) NOT NULL default '0',
+  display_name varchar(250) NOT NULL default '',
+  spam tinyint(2) NOT NULL default '0',
+  deleted tinyint(2) NOT NULL default '0',
+  PRIMARY KEY  (ID),
+  KEY user_login_key (user_login),
+  KEY user_nicename (user_nicename)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_usermeta' already exists for query 
+CREATE TABLE wp_usermeta (
+  umeta_id bigint(20) unsigned NOT NULL auto_increment,
+  user_id bigint(20) unsigned NOT NULL default '0',
+  meta_key varchar(255) default NULL,
+  meta_value longtext,
+  PRIMARY KEY  (umeta_id),
+  KEY user_id (user_id),
+  KEY meta_key (meta_key)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_blogs' already exists for query 
+CREATE TABLE wp_blogs (
+  blog_id bigint(20) NOT NULL auto_increment,
+  site_id bigint(20) NOT NULL default '0',
+  domain varchar(200) NOT NULL default '',
+  path varchar(100) NOT NULL default '',
+  registered datetime NOT NULL default '0000-00-00 00:00:00',
+  last_updated datetime NOT NULL default '0000-00-00 00:00:00',
+  public tinyint(2) NOT NULL default '1',
+  archived enum('0','1') NOT NULL default '0',
+  mature tinyint(2) NOT NULL default '0',
+  spam tinyint(2) NOT NULL default '0',
+  deleted tinyint(2) NOT NULL default '0',
+  lang_id int(11) NOT NULL default '0',
+  PRIMARY KEY  (blog_id),
+  KEY domain (domain(50),path(5)),
+  KEY lang_id (lang_id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_blog_versions' already exists for query 
+CREATE TABLE wp_blog_versions (
+  blog_id bigint(20) NOT NULL default '0',
+  db_version varchar(20) NOT NULL default '',
+  last_updated datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (blog_id),
+  KEY db_version (db_version)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_registration_log' already exists for query 
+CREATE TABLE wp_registration_log (
+  ID bigint(20) NOT NULL auto_increment,
+  email varchar(255) NOT NULL default '',
+  IP varchar(30) NOT NULL default '',
+  blog_id bigint(20) NOT NULL default '0',
+  date_registered datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (ID),
+  KEY IP (IP)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_site' already exists for query 
+CREATE TABLE wp_site (
+  id bigint(20) NOT NULL auto_increment,
+  domain varchar(200) NOT NULL default '',
+  path varchar(100) NOT NULL default '',
+  PRIMARY KEY  (id),
+  KEY domain (domain,path)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_sitemeta' already exists for query 
+CREATE TABLE wp_sitemeta (
+  meta_id bigint(20) NOT NULL auto_increment,
+  site_id bigint(20) NOT NULL default '0',
+  meta_key varchar(255) default NULL,
+  meta_value longtext,
+  PRIMARY KEY  (meta_id),
+  KEY meta_key (meta_key),
+  KEY site_id (site_id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta
+[23-Aug-2013 02:11:47 UTC] WordPress database error Table 'wp_signups' already exists for query 
+CREATE TABLE wp_signups (
+  domain varchar(200) NOT NULL default '',
+  path varchar(100) NOT NULL default '',
+  title longtext NOT NULL,
+  user_login varchar(60) NOT NULL default '',
+  user_email varchar(100) NOT NULL default '',
+  registered datetime NOT NULL default '0000-00-00 00:00:00',
+  activated datetime NOT NULL default '0000-00-00 00:00:00',
+  active tinyint(1) NOT NULL default '0',
+  activation_key varchar(50) NOT NULL default '',
+  meta longtext,
+  KEY activation_key (activation_key),
+  KEY domain (domain)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci made by wp_upgrade, make_db_current_silent, dbDelta

@@ -22,17 +22,9 @@ function _wp_admin_bar_init() {
 		return false;
 
 	/* Load the admin bar class code ready for instantiation */
-	require_once( ABSPATH . WPINC . '/class-wp-admin-bar.php' );
+	require( ABSPATH . WPINC . '/class-wp-admin-bar.php' );
 
 	/* Instantiate the admin bar */
-
-	/**
-	 * Filter the admin bar class to instantiate.
-	 *
-	 * @since 3.1.0
-	 *
-	 * @param string $wp_admin_bar_class Admin bar class to use. Default 'WP_Admin_Bar'.
-	 */
 	$admin_bar_class = apply_filters( 'wp_admin_bar_class', 'WP_Admin_Bar' );
 	if ( class_exists( $admin_bar_class ) )
 		$wp_admin_bar = new $admin_bar_class;
@@ -44,6 +36,9 @@ function _wp_admin_bar_init() {
 
 	return true;
 }
+// Don't remove. Wrong way to disable.
+add_action( 'template_redirect', '_wp_admin_bar_init', 0 );
+add_action( 'admin_init', '_wp_admin_bar_init' );
 
 /**
  * Render the admin bar to the page based on the $wp_admin_bar->menu member var.
@@ -62,46 +57,30 @@ function wp_admin_bar_render() {
 	if ( ! is_admin_bar_showing() || ! is_object( $wp_admin_bar ) )
 		return false;
 
-	/**
-	 * Load all necessary admin bar items.
-	 *
-	 * This is the hook used to add, remove, or manipulate admin bar items.
-	 *
-	 * @since 3.1.0
-	 *
-	 * @param WP_Admin_Bar $wp_admin_bar WP_Admin_Bar instance, passed by reference
-	 */
 	do_action_ref_array( 'admin_bar_menu', array( &$wp_admin_bar ) );
 
-	/**
-	 * Fires before the admin bar is rendered.
-	 *
-	 * @since 3.1.0
-	 */
 	do_action( 'wp_before_admin_bar_render' );
 
 	$wp_admin_bar->render();
 
-	/**
-	 * Fires after the admin bar is rendered.
-	 *
-	 * @since 3.1.0
-	 */
 	do_action( 'wp_after_admin_bar_render' );
 }
+add_action( 'wp_footer', 'wp_admin_bar_render', 1000 );
+add_action( 'in_admin_header', 'wp_admin_bar_render', 0 );
 
 /**
  * Add the WordPress logo menu.
  *
  * @since 3.3.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'wp-logo',
-		'title' => '<span class="ab-icon"></span><span class="screen-reader-text">' . __( 'About WordPress' ) . '</span>',
+		'title' => '<span class="ab-icon"></span>',
 		'href'  => self_admin_url( 'about.php' ),
+		'meta'  => array(
+			'title' => __('About WordPress'),
+		),
 	) );
 
 	if ( is_user_logged_in() ) {
@@ -110,7 +89,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 			'parent' => 'wp-logo',
 			'id'     => 'about',
 			'title'  => __('About WordPress'),
-			'href'   => self_admin_url( 'about.php' ),
+			'href'  => self_admin_url( 'about.php' ),
 		) );
 	}
 
@@ -119,7 +98,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		'parent'    => 'wp-logo-external',
 		'id'        => 'wporg',
 		'title'     => __('WordPress.org'),
-		'href'      => __('https://wordpress.org/'),
+		'href'      => __('http://wordpress.org/'),
 	) );
 
 	// Add codex link
@@ -127,7 +106,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		'parent'    => 'wp-logo-external',
 		'id'        => 'documentation',
 		'title'     => __('Documentation'),
-		'href'      => __('https://codex.wordpress.org/'),
+		'href'      => __('http://codex.wordpress.org/'),
 	) );
 
 	// Add forums link
@@ -135,7 +114,7 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		'parent'    => 'wp-logo-external',
 		'id'        => 'support-forums',
 		'title'     => __('Support Forums'),
-		'href'      => __('https://wordpress.org/support/'),
+		'href'      => __('http://wordpress.org/support/'),
 	) );
 
 	// Add feedback link
@@ -143,33 +122,14 @@ function wp_admin_bar_wp_menu( $wp_admin_bar ) {
 		'parent'    => 'wp-logo-external',
 		'id'        => 'feedback',
 		'title'     => __('Feedback'),
-		'href'      => __('https://wordpress.org/support/forum/requests-and-feedback'),
+		'href'      => __('http://wordpress.org/support/forum/requests-and-feedback'),
 	) );
-}
-
-/**
- * Add the sidebar toggle button.
- *
- * @since 3.8.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
- */
-function wp_admin_bar_sidebar_toggle( $wp_admin_bar ) {
-	if ( is_admin() ) {
-		$wp_admin_bar->add_menu( array(
-			'id'    => 'menu-toggle',
-			'title' => '<span class="ab-icon"></span><span class="screen-reader-text">' . __( 'Menu' ) . '</span>',
-			'href'  => '#',
-		) );
-	}
 }
 
 /**
  * Add the "My Account" item.
  *
  * @since 3.3.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_my_account_item( $wp_admin_bar ) {
 	$user_id      = get_current_user_id();
@@ -179,7 +139,7 @@ function wp_admin_bar_my_account_item( $wp_admin_bar ) {
 	if ( ! $user_id )
 		return;
 
-	$avatar = get_avatar( $user_id, 26 );
+	$avatar = get_avatar( $user_id, 16 );
 	$howdy  = sprintf( __('Howdy, %1$s'), $current_user->display_name );
 	$class  = empty( $avatar ) ? '' : 'with-avatar';
 
@@ -190,6 +150,7 @@ function wp_admin_bar_my_account_item( $wp_admin_bar ) {
 		'href'      => $profile_url,
 		'meta'      => array(
 			'class'     => $class,
+			'title'     => __('My Account'),
 		),
 	) );
 }
@@ -198,8 +159,6 @@ function wp_admin_bar_my_account_item( $wp_admin_bar ) {
  * Add the "My Account" submenu items.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_my_account_menu( $wp_admin_bar ) {
 	$user_id      = get_current_user_id();
@@ -247,10 +206,10 @@ function wp_admin_bar_my_account_menu( $wp_admin_bar ) {
  * Add the "Site Name" menu.
  *
  * @since 3.3.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_site_menu( $wp_admin_bar ) {
+	global $current_site;
+
 	// Don't show for logged out users.
 	if ( ! is_user_logged_in() )
 		return;
@@ -261,14 +220,13 @@ function wp_admin_bar_site_menu( $wp_admin_bar ) {
 
 	$blogname = get_bloginfo('name');
 
-	if ( ! $blogname ) {
+	if ( empty( $blogname ) )
 		$blogname = preg_replace( '#^(https?://)?(www.)?#', '', get_home_url() );
-	}
 
 	if ( is_network_admin() ) {
-		$blogname = sprintf( __('Network Admin: %s'), esc_html( get_current_site()->site_name ) );
+		$blogname = sprintf( __('Network Admin: %s'), esc_html( $current_site->site_name ) );
 	} elseif ( is_user_admin() ) {
-		$blogname = sprintf( __('Global Dashboard: %s'), esc_html( get_current_site()->site_name ) );
+		$blogname = sprintf( __('Global Dashboard: %s'), esc_html( $current_site->site_name ) );
 	}
 
 	$title = wp_html_excerpt( $blogname, 40, '&hellip;' );
@@ -317,10 +275,10 @@ function wp_admin_bar_site_menu( $wp_admin_bar ) {
  * Add the "My Sites/[Site Name]" menu and all submenus.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
+	global $wpdb;
+
 	// Don't show for logged out users or single site mode.
 	if ( ! is_user_logged_in() || ! is_multisite() )
 		return;
@@ -329,16 +287,10 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 	if ( count( $wp_admin_bar->user->blogs ) < 1 && ! is_super_admin() )
 		return;
 
-	if ( $wp_admin_bar->user->active_blog ) {
-		$my_sites_url = get_admin_url( $wp_admin_bar->user->active_blog->blog_id, 'my-sites.php' );
-	} else {
-		$my_sites_url = admin_url( 'my-sites.php' );
-	}
-
 	$wp_admin_bar->add_menu( array(
 		'id'    => 'my-sites',
 		'title' => __( 'My Sites' ),
-		'href'  => $my_sites_url,
+		'href'  => admin_url( 'my-sites.php' ),
 	) );
 
 	if ( is_super_admin() ) {
@@ -374,15 +326,9 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 		) );
 		$wp_admin_bar->add_menu( array(
 			'parent' => 'network-admin',
-			'id'     => 'network-admin-t',
-			'title'  => __( 'Themes' ),
-			'href'   => network_admin_url( 'themes.php' ),
-		) );
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'network-admin',
-			'id'     => 'network-admin-p',
-			'title'  => __( 'Plugins' ),
-			'href'   => network_admin_url( 'plugins.php' ),
+			'id'     => 'network-admin-v',
+			'title'  => __( 'Visit Network' ),
+			'href'   => network_home_url(),
 		) );
 	}
 
@@ -400,12 +346,7 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 
 		$blavatar = '<div class="blavatar"></div>';
 
-		$blogname = $blog->blogname;
-
-		if ( ! $blogname ) {
-			$blogname = preg_replace( '#^(https?://)?(www.)?#', '', get_home_url() );
-		}
-
+		$blogname = empty( $blog->blogname ) ? $blog->domain : $blog->blogname;
 		$menu_id  = 'blog-' . $blog->userblog_id;
 
 		$wp_admin_bar->add_menu( array(
@@ -455,8 +396,6 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
  * Provide a shortlink.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_shortlink_menu( $wp_admin_bar ) {
 	$short = wp_get_shortlink( 0, 'query' );
@@ -479,8 +418,6 @@ function wp_admin_bar_shortlink_menu( $wp_admin_bar ) {
  * Provide an edit link for posts and terms.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_edit_menu( $wp_admin_bar ) {
 	global $tag, $wp_the_query;
@@ -496,23 +433,11 @@ function wp_admin_bar_edit_menu( $wp_admin_bar ) {
 			&& ( $post_type_object->public )
 			&& ( $post_type_object->show_in_admin_bar ) )
 		{
-			if( 'draft' == $post->post_status ) {
-				$preview_link = set_url_scheme( get_permalink( $post->ID ) );
-				/** This filter is documented in wp-admin/includes/meta-boxes.php */
-				$preview_link = apply_filters( 'preview_post_link', add_query_arg( 'preview', 'true', $preview_link ), $post );
-				$wp_admin_bar->add_menu( array(
-					'id' => 'preview',
-					'title' => $post_type_object->labels->view_item,
-					'href' => esc_url( $preview_link ),
-					'meta' => array( 'target' => 'wp-preview-' . $post->ID ),
-				) );
-			} else {
-				$wp_admin_bar->add_menu( array(
-					'id' => 'view',
-					'title' => $post_type_object->labels->view_item,
-					'href' => get_permalink( $post->ID )
-				) );
-			}
+			$wp_admin_bar->add_menu( array(
+				'id' => 'view',
+				'title' => $post_type_object->labels->view_item,
+				'href' => get_permalink( $post->ID )
+			) );
 		} elseif ( 'edit-tags' == $current_screen->base
 			&& isset( $tag ) && is_object( $tag )
 			&& ( $tax = get_taxonomy( $tag->taxonomy ) )
@@ -533,24 +458,22 @@ function wp_admin_bar_edit_menu( $wp_admin_bar ) {
 		if ( ! empty( $current_object->post_type )
 			&& ( $post_type_object = get_post_type_object( $current_object->post_type ) )
 			&& current_user_can( 'edit_post', $current_object->ID )
-			&& $post_type_object->show_ui && $post_type_object->show_in_admin_bar
-			&& $edit_post_link = get_edit_post_link( $current_object->ID ) )
+			&& $post_type_object->show_ui && $post_type_object->show_in_admin_bar )
 		{
 			$wp_admin_bar->add_menu( array(
 				'id' => 'edit',
 				'title' => $post_type_object->labels->edit_item,
-				'href' => $edit_post_link
+				'href' => get_edit_post_link( $current_object->ID )
 			) );
 		} elseif ( ! empty( $current_object->taxonomy )
 			&& ( $tax = get_taxonomy( $current_object->taxonomy ) )
 			&& current_user_can( $tax->cap->edit_terms )
-			&& $tax->show_ui
-			&& $edit_term_link = get_edit_term_link( $current_object->term_id, $current_object->taxonomy ) )
+			&& $tax->show_ui )
 		{
 			$wp_admin_bar->add_menu( array(
 				'id' => 'edit',
 				'title' => $tax->labels->edit_item,
-				'href' => $edit_term_link
+				'href' => get_edit_term_link( $current_object->term_id, $current_object->taxonomy )
 			) );
 		}
 	}
@@ -560,8 +483,6 @@ function wp_admin_bar_edit_menu( $wp_admin_bar ) {
  * Add "Add New" menu.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_new_content_menu( $wp_admin_bar ) {
 	$actions = array();
@@ -606,6 +527,9 @@ function wp_admin_bar_new_content_menu( $wp_admin_bar ) {
 		'id'    => 'new-content',
 		'title' => $title,
 		'href'  => admin_url( current( array_keys( $actions ) ) ),
+		'meta'  => array(
+			'title' => _x( 'Add New', 'admin bar menu group label' ),
+		),
 	) );
 
 	foreach ( $actions as $link => $action ) {
@@ -624,8 +548,6 @@ function wp_admin_bar_new_content_menu( $wp_admin_bar ) {
  * Add edit comments link with awaiting moderation count bubble.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_comments_menu( $wp_admin_bar ) {
 	if ( !current_user_can('edit_posts') )
@@ -650,139 +572,45 @@ function wp_admin_bar_comments_menu( $wp_admin_bar ) {
  * Add appearance submenu items to the "Site Name" menu.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_appearance_menu( $wp_admin_bar ) {
 	$wp_admin_bar->add_group( array( 'parent' => 'site-name', 'id' => 'appearance' ) );
 
-	$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-	$customize_url = add_query_arg( 'url', urlencode( $current_url ), wp_customize_url() );
+	if ( current_user_can( 'switch_themes' ) || current_user_can( 'edit_theme_options' ) )
+		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'themes', 'title' => __('Themes'), 'href' => admin_url('themes.php') ) );
 
-	if ( current_user_can( 'switch_themes' ) ) {
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'appearance',
-			'id'     => 'themes',
-			'title'  => __( 'Themes' ),
-			'href'   => admin_url( 'themes.php' ),
-			'meta'   => array(
-				'class' => 'hide-if-customize',
-			),
-		) );
-
-		if ( current_user_can( 'customize' ) ) {
-			$wp_admin_bar->add_menu( array(
-				'parent' => 'appearance',
-				'id'     => 'customize-themes',
-				'title'  => __( 'Themes' ),
-				'href'   => add_query_arg( urlencode( 'autofocus[section]' ), 'themes', $customize_url ), // urlencode() needed due to #16859
-				'meta'   => array(
-					'class' => 'hide-if-no-customize',
-				),
-			) );
-		}
-	}
-
-	if ( current_user_can( 'customize' ) ) {
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'appearance',
-			'id'     => 'customize',
-			'title'  => __('Customize'),
-			'href'   => $customize_url,
-			'meta'   => array(
-				'class' => 'hide-if-no-customize',
-			),
-		) );
-		add_action( 'wp_before_admin_bar_render', 'wp_customize_support_script' );
-	}
-
-	if ( ! current_user_can( 'edit_theme_options' ) ) {
+	if ( ! current_user_can( 'edit_theme_options' ) )
 		return;
-	}
 
-	if ( current_theme_supports( 'widgets' )  ) {
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'appearance',
-			'id'     => 'widgets',
-			'title'  => __( 'Widgets' ),
-			'href'   => admin_url( 'widgets.php' ),
-			'meta'   => array(
-				'class' => 'hide-if-customize',
-			),
-		) );
+	$current_url = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	$wp_admin_bar->add_menu( array(
+		'parent' => 'appearance',
+		'id'     => 'customize',
+		'title'  => __('Customize'),
+		'href'   => add_query_arg( 'url', urlencode( $current_url ), wp_customize_url() ),
+		'meta'   => array(
+			'class' => 'hide-if-no-customize',
+		),
+	) );
+	add_action( 'wp_before_admin_bar_render', 'wp_customize_support_script' );
 
-		if ( current_user_can( 'customize' ) ) {
-			$wp_admin_bar->add_menu( array(
-				'parent' => 'appearance',
-				'id'     => 'customize-widgets',
-				'title'  => __( 'Widgets' ),
-				'href'   => add_query_arg( urlencode( 'autofocus[panel]' ), 'widgets', $customize_url ), // urlencode() needed due to #16859
-				'meta'   => array(
-					'class' => 'hide-if-no-customize',
-				),
-			) );
-		}
-	}
+	if ( current_theme_supports( 'widgets' )  )
+		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'widgets', 'title' => __('Widgets'), 'href' => admin_url('widgets.php') ) );
 
-	if ( current_theme_supports( 'menus' ) || current_theme_supports( 'widgets' ) )
+	 if ( current_theme_supports( 'menus' ) || current_theme_supports( 'widgets' ) )
 		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'menus', 'title' => __('Menus'), 'href' => admin_url('nav-menus.php') ) );
 
-	if ( current_theme_supports( 'custom-background' ) ) {
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'appearance',
-			'id'     => 'background',
-			'title'  => __( 'Background' ),
-			'href'   => admin_url( 'themes.php?page=custom-background' ),
-			'meta'   => array(
-				'class' => 'hide-if-customize',
-			),
-		) );
+	if ( current_theme_supports( 'custom-background' ) )
+		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'background', 'title' => __('Background'), 'href' => admin_url('themes.php?page=custom-background') ) );
 
-		if ( current_user_can( 'customize' ) ) {
-			$wp_admin_bar->add_menu( array(
-				'parent' => 'appearance',
-				'id'     => 'customize-background',
-				'title'  => __( 'Background' ),
-				'href'   => add_query_arg( urlencode( 'autofocus[control]' ), 'background_image', $customize_url ), // urlencode() needed due to #16859
-				'meta'   => array(
-					'class' => 'hide-if-no-customize',
-				),
-			) );
-		}
-	}
-
-	if ( current_theme_supports( 'custom-header' ) ) {
-		$wp_admin_bar->add_menu( array(
-			'parent' => 'appearance',
-			'id'     => 'header',
-			'title'  => __( 'Header' ),
-			'href'   => admin_url( 'themes.php?page=custom-header' ),
-			'meta'   => array(
-				'class' => 'hide-if-customize',
-			),
-		) );
-
-		if ( current_user_can( 'customize' ) ) {
-			$wp_admin_bar->add_menu( array(
-				'parent' => 'appearance',
-				'id'     => 'customize-header',
-				'title'  => __( 'Header' ),
-				'href'   => add_query_arg( urlencode( 'autofocus[control]' ), 'header_image', $customize_url ), // urlencode() needed due to #16859
-				'meta'   => array(
-					'class' => 'hide-if-no-customize',
-				),
-			) );
-		}
-	}
-
+	if ( current_theme_supports( 'custom-header' ) )
+		$wp_admin_bar->add_menu( array( 'parent' => 'appearance', 'id' => 'header', 'title' => __('Header'), 'href' => admin_url('themes.php?page=custom-header') ) );
 }
 
 /**
  * Provide an update link if theme/plugin/core updates are available.
  *
  * @since 3.1.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_updates_menu( $wp_admin_bar ) {
 
@@ -808,8 +636,6 @@ function wp_admin_bar_updates_menu( $wp_admin_bar ) {
  * Add search form.
  *
  * @since 3.3.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_search_menu( $wp_admin_bar ) {
 	if ( is_admin() )
@@ -817,7 +643,6 @@ function wp_admin_bar_search_menu( $wp_admin_bar ) {
 
 	$form  = '<form action="' . esc_url( home_url( '/' ) ) . '" method="get" id="adminbarsearch">';
 	$form .= '<input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" />';
-	$form .= '<label for="adminbar-search" class="screen-reader-text">' . __( 'Search' ) . '</label>';
 	$form .= '<input type="submit" class="adminbar-button" value="' . __('Search') . '"/>';
 	$form .= '</form>';
 
@@ -836,8 +661,6 @@ function wp_admin_bar_search_menu( $wp_admin_bar ) {
  * Add secondary menus.
  *
  * @since 3.3.0
- *
- * @param WP_Admin_Bar $wp_admin_bar
  */
 function wp_admin_bar_add_secondary_groups( $wp_admin_bar ) {
 	$wp_admin_bar->add_group( array(
@@ -860,6 +683,7 @@ function wp_admin_bar_add_secondary_groups( $wp_admin_bar ) {
  * Style and scripts for the admin bar.
  *
  * @since 3.1.0
+ *
  */
 function wp_admin_bar_header() { ?>
 <style type="text/css" media="print">#wpadminbar { display:none; }</style>
@@ -870,15 +694,12 @@ function wp_admin_bar_header() { ?>
  * Default admin bar callback.
  *
  * @since 3.1.0
+ *
  */
 function _admin_bar_bump_cb() { ?>
 <style type="text/css" media="screen">
-	html { margin-top: 32px !important; }
-	* html body { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-		* html body { margin-top: 46px !important; }
-	}
+	html { margin-top: 28px !important; }
+	* html body { margin-top: 28px !important; }
 </style>
 <?php
 }
@@ -924,16 +745,6 @@ function is_admin_bar_showing() {
 		}
 	}
 
-	/**
-	 * Filter whether to show the admin bar.
-	 *
-	 * Returning false to this hook is the recommended way to hide the admin bar.
-	 * The user's display preference is used for logged in users.
-	 *
-	 * @since 3.1.0
-	 *
-	 * @param bool $show_admin_bar Whether the admin bar should be shown. Default false.
-	 */
 	$show_admin_bar = apply_filters( 'show_admin_bar', $show_admin_bar );
 
 	return $show_admin_bar;

@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying Category pages
+ * The template for displaying Category pages.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen

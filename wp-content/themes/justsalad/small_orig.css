@@ -1,0 +1,177 @@
+.top-menu,
+.col-fourth,
+#sidebar-right,
+.hide-small,
+footer .fleft,
+nav .menu-header,
+nav .menu-mobile li span,
+#location-block,
+#regionform,
+#contactform,
+.location-infoC .letter {display:none;}
+
+.page-template-promo-php #contactform,
+footer ul.menu li.hide-lg { display: block; }
+
+.anythingSlider,
+.anythingWindow,
+.anythingControls {display:none !important;}
+
+#content {
+	width:100%;
+	margin:0;
+}
+
+#logo{
+	margin:7px 0 8px;
+}
+#logo a{
+}
+#logo img{
+	width:50px;
+	height:35px;
+}
+
+.home #logo {
+	float:none;
+	margin:0;
+	padding:6px 0 14px;
+	width:100%;
+	text-align:center;
+	z-index:2;
+	position:relative;
+	height: 111px;
+	
+}
+.home #logo a{
+	width:100%;
+	height:100%;
+}
+.home #logo img{
+	width:auto;
+	height:auto;
+position: absolute;
+	left: -999em;
+	
+}
+
+.home-bg {display:block; margin-left:50%; z-index:1; position:absolute; bottom:0; left:0;}
+.home-bg img {margin-left:-50%;}
+
+.home #main {padding-bottom:0;}
+
+nav#access {clear:none;
+	background:none;
+	width:auto;
+	z-index:2;
+}
+nav .menu-mobile {display:block; list-style:none; margin:0; padding:13px 0 0;}
+nav .menu-mobile li { float:left; margin-left:5px;}
+nav .menu-mobile a { color:#FFFFFF;
+	display:block;
+	padding:0 7px 2px;
+	text-decoration:none;	
+	font:14px/20px "comic-serif-pro", Georgia, "Times New Roman", Times, serif;	
+	text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+	background:#71d000;
+}
+
+nav .menu-mobile li:hover a,
+nav .menu-mobile ul :hover a { color:#bdfa74; }
+
+nav .menu-mobile li[class*="current"] a { color:#bdfa74; }
+nav .menu-mobile li[class*="current"].neverActive a { color:#fff; }
+	nav .menu-mobile li[class*="current"].neverActive a:hover { color:#bdfa74; }
+
+.home nav#access {position:relative; left:-50%; padding-top:68px;}
+.home nav .menu-mobile {position:relative; left:50%; padding:0;}
+.home nav .menu-mobile li { float:none; margin-left:0px; padding-bottom:10px;}
+.home nav .menu-mobile li a {text-align:center; font-size:21px; line-height:32px; box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.9);}
+
+#zipform {margin-left:0px;}
+
+#contact-info-small {display:block; font:20px/30px "comic-serif-pro", Georgia, "Times New Roman", Times, serif;	text-align:center; padding-top:93px;}
+#contact-info-small span {color:#71d000;}
+
+.location-infoC {width:100%;}
+.location-infoC ul {list-style:none; margin:0; padding:0;}
+	.location-infoC li { border-bottom: 1px solid #555;}
+
+		.location-infoC li .fleft { max-width: 160px; }
+
+.location-infoC {float:left;}
+.location-infoC #buttons {float:right; max-width:125px; clear: none;}
+	.location-infoC .lochide { position: relative; left: auto;}
+
+a.button { float:right; padding:0 7px; margin:0 0 5px 5px; font-size:15px; line-height:23px;}
+
+a.button.hide-lg, div.hide-lg {display:block;}
+img.hide-lg { display: inline-block; }
+a.button.hide-sm, div.hide-sm { display: none;}
+
+a.cright { clear: right; }
+
+footer {height:65px; background:url(images/transparent.png); color:#FFFFFF; bottom:0%;}
+footer .fright {float:none; text-align:center;}
+
+footer p { float: none; padding: none; text-align: center;}
+
+footer .fright ul {float:none;}
+footer .fright ul li {display:inline-block; float:left; padding:0 0 0 8%;}
+footer .fright ul li.hide-small {display:none;}
+footer .fright ul li.hide-lg {float: right; padding:0;}
+footer .fright ul li a {color:#FFFFFF; font-weight:bold;}
+footer .fright ul li a:hover {color:#f78f1e;}
+footer .fright ul #change-box {display:none; 
+/*	-webkit-transition:display 1s;
+	-webkit-transition-timing-function:linear;
+	-webkit-transition-delay:2s;
+    transition:display 1s;
+    transition-timing-function:linear;
+    transition-delay:2s;						*/
+    background:#71d000; 
+    padding:2px 8px 2px 8px; 
+    margin:2px 0 0; 
+    position:absolute; 
+    bottom:100%; 
+    min-width:68px; 
+    z-index:10;
+}
+footer .fright ul #change-box li {float:right; width:100%; padding:0; text-align: left;}
+footer .fright ul #change-box li a {display:inline-block; color:#FFFFFF; font-size:12px; line-height:22px;}
+footer .fright ul #change-region:hover + #change-box, footer .fright ul #change-box:hover {display:block;} /* won't work on browser full=0 small because hover is different */
+/*footer .fright ul #change-region:not(:hover) + #change-box {display:none;} //nonono */
+footer .fright p {padding-bottom:0;}
+
+
+.push {
+	height: 45px;
+}
+
+#wrapper {
+	width: 300px;
+	margin: 0 auto -45px;
+}
+
+.home #wrapper { width: 100%; background:url(images/store83fadeSM2.jpg) no-repeat fixed bottom center; background-size: cover;}
+
+#wrapperB {
+	width:300px;	
+	position:relative;
+	padding:4px 0 5px;
+	margin: 0 auto;
+}
+
+.location-infoC ul li:after,
+nav ul.menu-mobile:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#map { display: none; }
+
+#content img.featured { width: 100%; !IMPORTANT}
+
+#zipform input#zipsubmit { -webkit-appearance: none; }
