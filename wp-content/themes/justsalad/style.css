@@ -371,7 +371,7 @@ ul.top-menu #change-box {display:none; background:#71d000; padding:8px 38px 12px
 		ul.top-menu #change-box li a {display:block; color:#FFFFFF; font-size:12px; line-height:22px;}
 
 nav#access {clear:both;
-	background:url(/home/paty/Wordpress/html/wp-content/themes/justsalad/images/menu-bg.png) no-repeat top right;
+	background:url(images/menu-bg.png) no-repeat top right;
 	width: 805px;
 	padding:0 5px;
 	clear:right;
