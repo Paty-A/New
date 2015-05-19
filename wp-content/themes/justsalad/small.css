@@ -88,7 +88,15 @@ nav .menu-mobile li[class*="current"].neverActive a { color:#fff; }
 .home nav .menu-mobile li { float:none; margin-left:0px; padding-bottom:10px;}
 .home nav .menu-mobile li a {text-align:center; font-size:21px; line-height:32px; box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.9);}
 
+/* Changes made to location-block and regionform */
+
+#location-block {float:left; width:174px; height:43px; background:#71d000; color:#FFFFFF; text-align:center; font-weight:bold;}
+
 #zipform {margin-left:0px;}
+
+#regionform {float:left; width:173px;}
+
+/* end changes */
 
 #contact-info-small {display:block; font:20px/30px "comic-serif-pro", Georgia, "Times New Roman", Times, serif;	text-align:center; padding-top:93px;}
 #contact-info-small span {color:#71d000;}
